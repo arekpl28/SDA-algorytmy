@@ -1,4 +1,4 @@
-package Algorytmu.sort;
+package Algorytm.sort;
 
 public class SortUtils {
 

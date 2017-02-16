@@ -1,6 +1,6 @@
-package Algorytmu.structures;
+package Algorytm.structures;
 
-public class MyList {
+public class MyList implements MyListInterface {
 
     private int[] array;
     private final int INITIAL_SIZE = 10;
@@ -52,6 +52,18 @@ public class MyList {
         size++;
     }
 
+    public void addAll(MyListInterface myList) {
+        for (int i = 0; i < myList.getSize(); i++) {
+            this.add(myList.get(i));
+        }
+    }
+
+    public void addAll(int index, MyListInterface myList) {
+        for (int i = 0; i < myList.getSize(); i++) {
+            add(index + i, myList.get(i));
+        }
+    }
+
     private void swap(int i1, int i2) {
         int tmp = this.array[i1];
         this.array[i1] = this.array[i2];
@@ -67,11 +79,11 @@ public class MyList {
         }
     }
 
-    public MyList clone() {
-        MyList myList = new MyList();
-        myList.array = rewrite(new int[this.array.length]);
-        myList.size = this.size;
-        return myList;
+    public MyListInterface clone() {
+        MyList tmpList = new MyList();
+        tmpList.array = rewrite(new int[this.array.length]);
+        tmpList.size = this.size;
+        return tmpList;
     }
 
     private void doubleCapacity() {

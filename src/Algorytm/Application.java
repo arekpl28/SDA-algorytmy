@@ -1,12 +1,14 @@
-package Algorytmu;
+package Algorytm;
 
 
-import Algorytmu.structures.MyList;
+import Algorytm.structures.MyLinkedList;
+import Algorytm.structures.MyList;
+import Algorytm.structures.MyListInterface;
 
 public class Application {
     public static void main(String[] args) {
-        MyList myList = initMyList();
-        MyList clonedList = myList.clone();
+        MyListInterface myList = initMyList();
+        MyListInterface clonedList = myList.clone();
         System.out.println(myList);
         System.out.println(clonedList);
         System.out.println();
