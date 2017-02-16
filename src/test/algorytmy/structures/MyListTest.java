@@ -1,11 +1,10 @@
-package Algorytm;
+package test.algorytmy.structures;
 
 
-import Algorytm.structures.MyLinkedList;
-import Algorytm.structures.MyList;
-import Algorytm.structures.MyListInterface;
+import algorytm.structures.MyList;
+import algorytm.structures.MyListInterface;
 
-public class Application {
+public class MyListTest {
     public static void main(String[] args) {
         MyListInterface myList = initMyList();
         MyListInterface clonedList = myList.clone();

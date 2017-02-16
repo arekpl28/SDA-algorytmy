@@ -1,4 +1,4 @@
-package Algorytm.structures;
+package algorytm.structures;
 
 public class MyList implements MyListInterface {
 
