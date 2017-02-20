@@ -2,15 +2,18 @@ package test.algorytmy.structures.queue;
 
 
 import algorytm.structures.queue.FIFOQueue;
+import algorytm.structures.queue.LIFOQueue;
 import algorytm.structures.queue.Queue;
 
 import javax.sound.midi.Soundbank;
 
 public class FIFOQueueTest {
     public static void main(String[] args) {
-        Queue queue = new FIFOQueue();
+        Queue queue = new LIFOQueue();
         queue.push(2);
+        System.out.println(queue);
         queue.push(3);
+        System.out.println(queue);
         queue.push(4);
         System.out.println(queue);
         queue.pop();
