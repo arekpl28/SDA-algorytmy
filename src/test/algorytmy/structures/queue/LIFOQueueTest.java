@@ -3,12 +3,17 @@ package test.algorytmy.structures.queue;
 
 import algorytm.structures.queue.Queue;
 import algorytm.structures.queue.LIFOQueue;
+import algorytm.structures.queue.QueueException;
 
 public class LIFOQueueTest {
     public static void main(String[] args) {
 
         Queue queue = new LIFOQueue();
-        queue.pop();
+        try {
+            queue.pop();
+        } catch (QueueException e) {
+            e.printStackTrace();
+        }
         System.out.println();
 
         queue.push(3);
@@ -20,9 +25,9 @@ public class LIFOQueueTest {
         Queue clonedQueue = queue.clone();
         System.out.println(clonedQueue);
 
-        System.out.println(queue.pop());
-        System.out.println(queue.pop());
-        System.out.println();
+//        System.out.println(queue.pop());
+//        System.out.println(queue.pop());
+//        System.out.println();
 
     }
 }
